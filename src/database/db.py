@@ -1,5 +1,5 @@
 from src.database.config import supabase
-import bcrypt
+import bcrypt # type: ignore
 
 def hash_pass(pwd):
     return bcrypt.hashpw(pwd.encode(), bcrypt.gensalt()).decode()
