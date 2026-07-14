@@ -175,7 +175,7 @@ def teacher_tab_manage_subjects():
     teacher_id = st.session_state.teacher_data['teacher_id']
     
     
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns(2, vertical_alignment='center')
     
     with col1:
         st.header("Manage Subjects", width='stretch')
