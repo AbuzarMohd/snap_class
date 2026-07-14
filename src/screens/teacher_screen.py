@@ -193,18 +193,18 @@ def teacher_tab_manage_subjects():
                 ("🕙", "Classes", sub['total_classes'])
             ]
         
-        def share_btn():
-            if st.button(f"Share code: {sub['name']}", key=f"share_{sub['subject_code']}", icon=":material/share:"):
-                share_subject_dialog(sub['name'], sub['subject_code'])
-           
+            def share_btn():
+                if st.button(f"Share code: {sub['name']}", key=f"share_{sub['subject_code']}", icon=":material/share:"):
+                    share_subject_dialog(sub['name'], sub['subject_code'])
             
-        subject_card(
-            name = sub['name'],
-            code = sub['subject_code'],
-            section = sub['section'],
-            stats = stats,
-            footer_callback = share_btn
-        )
+                
+            subject_card(
+                name = sub['name'],
+                code = sub['subject_code'],
+                section = sub['section'],
+                stats = stats,
+                footer_callback = share_btn
+            )
     else:
         st.info("NO SUBJECT FOUND. CREATE ONE ABOVE")
 
